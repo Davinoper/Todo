@@ -74,7 +74,6 @@ C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\System.Web.WebPages.xml
 C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\System.Web.WebPages.Deployment.xml
 C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\System.Web.WebPages.Razor.xml
 C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Newtonsoft.Json.xml
-C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Antlr3.Runtime.pdb
 C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\pt-br\System.Web.Helpers.resources.dll
 C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\pt-br\System.Web.Mvc.resources.dll
@@ -100,3 +99,17 @@ C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrat
 C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrations.Novissima.resources
 C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrations.Usus.resources
 C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrations.correcaoUsu.resources
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Swashbuckle.Core.dll
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\WebActivatorEx.dll
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Iesi.Collections.dll
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\NHibernate.dll
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Remotion.Linq.dll
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Remotion.Linq.EagerFetching.dll
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\System.Numerics.Vectors.dll
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Antlr3.Runtime.xml
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Iesi.Collections.xml
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\NHibernate.xml
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Remotion.Linq.xml
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Remotion.Linq.EagerFetching.xml
+C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\System.Numerics.Vectors.xml
+C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrations.recovery.resources

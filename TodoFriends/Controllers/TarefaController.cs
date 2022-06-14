@@ -18,7 +18,9 @@ namespace TodoFriends.Controllers
         private TodoFriensContext db = new TodoFriensContext();
 
         // GET: api/Tarefa
-        [NonAction]
+      
+        [Route("api/Tarefa/getTarefas")]
+        [HttpGet]
         public IQueryable<Tarefa> GetTarefas()
         {
             List<Tarefa> tarefas = new List<Tarefa>();
@@ -74,7 +76,9 @@ namespace TodoFriends.Controllers
         }
 
         // GET: api/Tarefa/5
-        [NonAction]
+
+        [Route("api/Tarefa/getTarefas/{id}")]
+        [HttpGet]
         [ResponseType(typeof(Tarefa))]
         public IHttpActionResult GetTarefa(int id)
         {

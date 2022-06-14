@@ -1,9 +1,12 @@
+
+using NHibernate.Mapping;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using TodoFriends.Models;
+
 
 namespace TodoFriends.Data
 {
@@ -20,10 +23,12 @@ namespace TodoFriends.Data
         public DbSet<Externa> Externas { get; set; }
         public DbSet<Horario> Horarios { get; set; }
         public DbSet<Local> Locais { get; set; }
+       
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+           
         }
     }
 }

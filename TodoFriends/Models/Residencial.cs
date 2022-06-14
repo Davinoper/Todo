@@ -11,8 +11,9 @@ namespace TodoFriends.Models
     public class Residencial : Tarefa
     {
      
-        [StringLength(20)]
         public string comodo { get; set; }
+
+        
        
       
     }

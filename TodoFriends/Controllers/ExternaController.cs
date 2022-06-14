@@ -30,6 +30,7 @@ namespace TodoFriends.Controllers
             return db.Externas;
         }
 
+        [ApiExplorerSettings(IgnoreApi = true)]
         // GET: api/Externa/5
         [ResponseType(typeof(Externa))]
         public IHttpActionResult GetExterna(int id)
@@ -108,6 +109,7 @@ namespace TodoFriends.Controllers
             return CreatedAtRoute("DefaultApi", new { id = externa.Id }, externa);
         }
 
+        [ApiExplorerSettings(IgnoreApi = true)]
         // DELETE: api/Externa/5
         [ResponseType(typeof(Externa))]
         public IHttpActionResult DeleteExterna(int id)

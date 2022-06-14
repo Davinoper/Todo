@@ -22,13 +22,21 @@ namespace TodoFriends.Data
 
             if (dr.Read())
             {
+                int aux = dr.GetInt32(3);
 
-                return dr.GetInt32(3);
+                con.Close();
+                
+
+                return aux;
             }
             else
             {
+                con.Close();
+               
                 return -1;
             }
+
+            
         }
     }
 }

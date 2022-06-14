@@ -31,6 +31,8 @@ namespace TodoFriends.Controllers
             return db.Residenciais;
         }
 
+
+        [ApiExplorerSettings(IgnoreApi = true)]
         // GET: api/Residencial/5
         [ResponseType(typeof(Residencial))]
         public IHttpActionResult GetResidencial(int id)
@@ -108,6 +110,7 @@ namespace TodoFriends.Controllers
             return CreatedAtRoute("DefaultApi", new { id = residencial.Id }, residencial);
         }
 
+        [ApiExplorerSettings(IgnoreApi = true)]
         // DELETE: api/Residencial/5
         [ResponseType(typeof(Residencial))]
         public IHttpActionResult DeleteResidencial(int id)
