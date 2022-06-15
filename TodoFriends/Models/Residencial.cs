@@ -11,7 +11,7 @@ namespace TodoFriends.Models
     public class Residencial : Tarefa
     {
      
-        public string comodo { get; set; }
+        public virtual ICollection<Comodo> Comodos { get; set; }
 
         
        

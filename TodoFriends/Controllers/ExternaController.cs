@@ -20,6 +20,7 @@ namespace TodoFriends.Controllers
         // GET: api/Externa
         public IQueryable<Externa> GetTarefas()
         {
+           
             foreach (var item in db.Externas)
             {
                 item.Horario = db.Horarios.Find(HorarioDao.findIdByTarefa((Tarefa) item));
@@ -27,6 +28,7 @@ namespace TodoFriends.Controllers
                 item.Usuario = db.Usuarios.Find(UsuarioDao.findIdByTarefa(item));
 
             }
+            
             return db.Externas;
         }
 
@@ -92,6 +94,7 @@ namespace TodoFriends.Controllers
         [ResponseType(typeof(Externa))]
         public IHttpActionResult PostExterna(Externa externa)
         {
+            AuxDao.deleteTrash();
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

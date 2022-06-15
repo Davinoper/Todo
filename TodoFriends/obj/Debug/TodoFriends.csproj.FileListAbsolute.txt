@@ -113,3 +113,7 @@ C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Remotion.Linq.xml
 C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\Remotion.Linq.EagerFetching.xml
 C:\Users\david\source\repos\TodoFriends\TodoFriends\bin\System.Numerics.Vectors.xml
 C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrations.recovery.resources
+C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrations.recover.resources
+C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrations.comodos.resources
+C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrations.reco.resources
+C:\Users\david\source\repos\TodoFriends\TodoFriends\obj\Debug\TodoFriends.Migrations.tentativa.resources

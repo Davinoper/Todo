@@ -36,6 +36,7 @@ namespace TodoFriends.Controllers
                     ex.Local = db.Locais.Find(LocalDao.findIdByTarefa(ex));
                     tarefas.Add(ex);
                 }
+                
                 tarefas.Add(item);
                
    
@@ -67,8 +68,11 @@ namespace TodoFriends.Controllers
                         ex.Local = db.Locais.Find(LocalDao.findIdByTarefa(ex));
                         tarefas.Add(ex);
                     }
-
-                    tarefas.Add(item);
+                    else
+                    {
+                        tarefas.Add(item);
+                    }
+                    
                 }
             }
             IQueryable<Tarefa> tarefas2 = tarefas.AsQueryable();

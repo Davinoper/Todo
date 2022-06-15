@@ -20,14 +20,22 @@ namespace TodoFriends.Controllers
         // GET: api/Residencial
         public IQueryable<Residencial> GetTarefas()
         {
+            AuxDao.deleteTrash();
             foreach (var item in db.Residenciais)
             {
                 item.Horario = db.Horarios.Find(HorarioDao.findIdByTarefa(item));
                 item.Usuario = db.Usuarios.Find(UsuarioDao.findIdByTarefa(item));
+               
+
+
+
+              
 
 
 
             }
+            
+
             return db.Residenciais;
         }
 
@@ -37,12 +45,21 @@ namespace TodoFriends.Controllers
         [ResponseType(typeof(Residencial))]
         public IHttpActionResult GetResidencial(int id)
         {
-
+            AuxDao.deleteTrash();
             Residencial residencial = db.Residenciais.Find(id);
             if (residencial == null)
             {
                 return NotFound();
             }
+
+            residencial.Horario = db.Horarios.Find(HorarioDao.findIdByTarefa(residencial));
+            residencial.Usuario = db.Usuarios.Find(UsuarioDao.findIdByTarefa(residencial));
+            
+            foreach(var item in residencial.Comodos)
+            {
+                item.Residenciais = null;
+            }
+            
 
             return Ok(residencial);
         }
@@ -61,9 +78,23 @@ namespace TodoFriends.Controllers
                 return BadRequest();
             }
 
-
+            List<Comodo> comodoAux = new List<Comodo>();
             residencial.Horario = db.Horarios.Find(residencial.Horario.Id);
             residencial.Usuario = db.Usuarios.Find(residencial.Usuario.Id);
+
+            foreach (var item in residencial.Comodos)
+            {
+                comodoAux.Add(db.comodos.Find((int)item.Id));
+            }
+
+
+
+            foreach (var item in comodoAux)
+            {
+                residencial.Comodos.Add((Comodo)item);
+            }
+
+
 
             ResidencialDao.putAux(residencial);
 
@@ -86,8 +117,8 @@ namespace TodoFriends.Controllers
             }
 
             Residencial residencialSaved =  db.Residenciais.Find(residencial.Id);
-
-            return Ok(residencialSaved);
+            AuxDao.deleteTrash();
+            return Ok();
         }
 
         // POST: api/Residencial
@@ -99,15 +130,29 @@ namespace TodoFriends.Controllers
                 return BadRequest(ModelState);
             }
 
-            Usuario usuario = db.Usuarios.Find(residencial.Usuario.Id);
-            Horario horario = db.Horarios.Find(residencial.Horario.Id);
-            residencial.Horario = horario;
-            residencial.Usuario = usuario;
+            List<Comodo> comodoAux = new List<Comodo>(); 
+            residencial.Horario = db.Horarios.Find(residencial.Horario.Id);
+            residencial.Usuario = db.Usuarios.Find(residencial.Usuario.Id); ;
+           
+
+            foreach(var item in residencial.Comodos)
+            {
+                comodoAux.Add(db.comodos.Find((int) item.Id));
+            }
+
+          
+
+            foreach(var item in comodoAux)
+            {
+                residencial.Comodos.Add((Comodo) item);
+            }
+
+            
 
             db.Tarefas.Add(residencial);
             db.SaveChanges();
-
-            return CreatedAtRoute("DefaultApi", new { id = residencial.Id }, residencial);
+            AuxDao.deleteTrash();
+            return Ok();
         }
 
         [ApiExplorerSettings(IgnoreApi = true)]

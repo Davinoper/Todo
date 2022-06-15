@@ -163,6 +163,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ComodoesController.cs" />
     <Compile Include="Controllers\ExternaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HorarioController.cs" />
@@ -170,6 +171,7 @@
     <Compile Include="Controllers\ResidencialController.cs" />
     <Compile Include="Controllers\TarefaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Data\AuxDao.cs" />
     <Compile Include="Data\Conexao.cs" />
     <Compile Include="Data\ExternaDao.cs" />
     <Compile Include="Data\HorarioDao.cs" />
@@ -204,10 +206,28 @@
     <Compile Include="Migrations\202206141556473_recovery.designer.cs">
       <DependentUpon>202206141556473_recovery.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206142320261_recover.cs" />
+    <Compile Include="Migrations\202206142320261_recover.designer.cs">
+      <DependentUpon>202206142320261_recover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206142324586_comodos.cs" />
+    <Compile Include="Migrations\202206142324586_comodos.designer.cs">
+      <DependentUpon>202206142324586_comodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206142331356_reco.cs" />
+    <Compile Include="Migrations\202206142331356_reco.designer.cs">
+      <DependentUpon>202206142331356_reco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206142335513_tentativa.cs" />
+    <Compile Include="Migrations\202206142335513_tentativa.designer.cs">
+      <DependentUpon>202206142335513_tentativa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Comodo.cs" />
     <Compile Include="Models\Externa.cs" />
     <Compile Include="Models\Horario.cs" />
     <Compile Include="Models\Local.cs" />
+    <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Residencial.cs" />
     <Compile Include="Models\Tarefa.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -284,6 +304,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206141556473_recovery.resx">
       <DependentUpon>202206141556473_recovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206142320261_recover.resx">
+      <DependentUpon>202206142320261_recover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206142324586_comodos.resx">
+      <DependentUpon>202206142324586_comodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206142331356_reco.resx">
+      <DependentUpon>202206142331356_reco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206142335513_tentativa.resx">
+      <DependentUpon>202206142335513_tentativa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

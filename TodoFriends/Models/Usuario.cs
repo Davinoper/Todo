@@ -16,5 +16,7 @@ namespace TodoFriends.Models
         public string Nome { get; set; }
 
         public int idade { get; set; }
+
+        
     }
 }

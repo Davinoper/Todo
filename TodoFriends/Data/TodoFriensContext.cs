@@ -23,6 +23,9 @@ namespace TodoFriends.Data
         public DbSet<Externa> Externas { get; set; }
         public DbSet<Horario> Horarios { get; set; }
         public DbSet<Local> Locais { get; set; }
+
+        public DbSet<Comodo> comodos { get; set; }
+
        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
